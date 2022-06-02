@@ -1,0 +1,268 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection
+{
+    background-color: transparent;
+}
+
+
+body
+{
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: #0c192c;
+    overflow: hidden;
+
+}
+
+.winner
+{
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/you\ win.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: 1000;
+    display: none;
+}
+
+.lose
+{
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/661.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: 2000;
+    display: none;
+}
+
+
+.container
+{
+    width: 80%;
+    margin: auto;
+    position: relative;
+    height: 100vh;
+}
+
+.bubbles
+{
+    position: absolute;
+    display: flex;
+    z-index: -1000;
+}
+
+.bubbles span 
+{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44 , 0 0 50px #4fc3dc , 0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(80s / var(--i));
+}
+
+.bubbles span:nth-child(even)
+{
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px  #ff2d75 , 0 0 50px  #ff2d75 , 0 0 100px  #ff2d75;
+
+}
+@keyframes animate {
+    0% 
+    {
+        transform: translateY(100vh) scale(0);
+    }
+
+    100% 
+    {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+.timer
+{
+    color: white;
+}
+
+.nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.btn
+{
+    display: flex;
+    align-items: center;
+    width: 25%;
+  
+
+}
+.heart
+{
+    margin-left: 3rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+.heart-items 
+{
+    margin-right: 50px;
+}
+
+.heart .timer 
+{
+    width: 120px;
+}
+
+.btn .new-game
+{
+    height: 50px;
+    width: 130px;
+    border-radius: 4px;
+    color: white;
+    border-style: none;
+    cursor: pointer;
+  background-image: linear-gradient(160deg, #5cbeed 0%, #80D0C7 100%);
+  position: relative;
+  z-index: 99999;
+}
+
+
+.btn .hint 
+{
+    height: 50px;
+    width: 130px;
+    border-radius: 4px;
+    background-image: linear-gradient(160deg, #5cbeed 0%, #80D0C7 100%);
+    color: white;
+    border-style: none;
+    margin: 20px;
+    cursor: pointer;
+   
+}
+
+.header
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: beige;
+    flex-grow: 1;
+    margin-left: 120px;
+  
+}
+
+.header img 
+{
+    margin-left: 15px;
+}
+
+.card-cont
+{
+    width: 600px;
+    height: 580px;
+    border-radius: 5px ;
+    background-image: linear-gradient(to right, #f1b1b1 , #82e6e8);
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    padding-top: 10px;
+
+}
+
+.item 
+{
+    width: 120px;
+    height: 120px;
+    background-color: transparent;
+    position: relative;
+    border-radius: 5px;
+    transform-style: preserve-3d; /*بيحول الحاجة ثري دي*/
+    transition: transform 0.8s;
+    margin: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    background: #d0ebf5;
+    
+    
+}
+.item .stop-click
+{
+    pointer-events: none;
+
+}
+
+.item img 
+{
+    width: 100%;
+}
+
+.c-icon
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    text-align: center;
+    margin-top: 20px;
+    
+}
+
+.c-icon img 
+{
+    width: 70%;
+     
+}
+
+
+.c-img 
+{
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 20px;
+    margin-left: 15px;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    
+}
+
+
+.item:hover
+{
+    transform: scale(0.90);
+}
+
+
+
+
+
+
+
+
+
+
+
